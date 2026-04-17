@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jean Guedes | Portfólio</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
+</head>
+<body class="dark">
+
+    <!-- LOADER -->
+    <div id="loader">
+        <h1>Jean.dev</h1>
+    </div>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <h2 class="logo">Jean.dev</h2>
+
+        <nav>
+            <a href="#home">Início</a>
+            <a href="#about">Sobre</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projetos</a>
+            <a href="#contact">Contatos</a>
+        </nav>
+
+        <div class="theme-toggle" onclick="toggleTheme()">
+            <div class="toggle-track">
+                <div class="toggle-sun"></div>
+                <div class="toggle-moon"></div>
+                <div class="toggle-cloud"></div>
+                <div class="toggle-stars"></div>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <section id="home" class="hero page-section">
+        <div class="hero-content">
+            <h1>Desenvolvedor Full-Stack<br>
+                & Analista de Dados
+            </h1>
+            <h2 id="typing"></h2>
+            <p>Automação, Dados e Soluções Inteligentes</p>
+            <button onclick="scrollToSection('projects')">Ver Projetos</button>
+        </div>
+    </section>
+
+    <!-- SOBRE -->
+    <section id="about" class="container reveal page-section">
+        <div class="section-content">
+            <h2>Olá sou Jean</h2>
+            <p>
+                Sou desenvolvedor com sólida experiência em backend e background em análise de dados, focado na construção de aplicações escaláveis e eficientes.<br>
+
+                Atuo principalmente com Java e Spring Boot no desenvolvimento de APIs e sistemas web, além de experiência com JavaScript, integração com bancos de dados (SQL, MySQL, Oracle) e consumo de APIs. Minha vivência com dados (Power BI, Python e VBA) agrega uma visão analítica ao desenvolvimento, permitindo criar soluções mais inteligentes, orientadas a negócio e com melhor tomada de decisão.<br>
+
+                Tenho facilidade em aprender novas tecnologias, sigo boas práticas de desenvolvimento e busco constantemente evoluir minhas habilidades, com foco em arquitetura, performance e qualidade de código.
+            </p>
+        </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="skills-section reveal page-section">
+        <div class="skills-content">
+            <p class="skills-mini-title">TECNOLOGIAS & EXPERIÊNCIA</p>
+            <h2>TECNOLOGIAS</h2>
+
+            <p class="skills-description">
+                Eu me especializo na criação de aplicativos da web, tratamento e estruturação de dados e desenvolvimento de dashboard.
+            </p>
+
+            <p class="skills-description">
+                Minha experiência inclui HTML, CSS e JavaScript, Jquery desenvolvendo recursos e plugins customizados, criando animações e codificando layouts interativos. Também tenho experiência full-stack, incluindo trabalho com PHP, Perl, JAVA e C#.
+            </p>
+
+
+            <div class="skills-logo-grid">
+
+                <div class="skill-logo-item">
+                    <i class="fa-brands fa-java"></i>
+                    <span>Java</span>
+                </div>
+
+                <div class="skill-logo-item">
+                    <i class="fa-brands fa-js"></i>
+                    <span>JavaScript</span>
+                </div>
+
+                <div class="skill-logo-item">
+                    <i class="fa-solid fa-code"></i>
+                    <span>JQuery</span>
+                </div>
+
+
+                <div class="skill-logo-item">
+                    <i class="fa-brands fa-html5"></i>
+                    <span>HTML5</span>
+                </div>
+
+                <div class="skill-logo-item">
+                    <i class="fa-brands fa-css3-alt"></i>
+                    <span>CSS3</span>
+                </div>
+
+           
+                <div class="skill-logo-item">
+                    <i class="fa-brands fa-php"></i>
+                    <span>PHP</span>
+                </div>
+
+                <div class="skill-logo-item">
+                    <i class="fa-brands fa-laravel"></i>
+                    <span>Laravel</span>
+                </div>
+
+
+                <div class="skill-logo-item">
+                    <i class="fa-solid fa-database"></i>
+                    <span>SQL Server</span>
+                </div>
+
+                <div class="skill-logo-item">
+                    <i class="fa-solid fa-chart-column"></i>
+                    <span>Power BI</span>
+                </div>
+
+                <div class="skill-logo-item">
+                    <i class="fa-solid fa-table-cells-large"></i>
+                    <span>Power Apps</span>
+                </div>
+
+                <div class="skill-logo-item">
+                    <i class="fa-solid fa-file-excel"></i>
+                    <span>VBA</span>
+                </div>
+
+            
+                <div class="skill-logo-item">
+                    <i class="fa-brands fa-git-alt"></i>
+                    <span>Git</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJETOS -->
+    <section id="projects" class="projects-section">
+        <div class="projects-header">
+            <h2>Projetos</h2>
+        </div>
+
+        <div class="projects-track">
+            <article class="project-panel featured-project">
+                <div class="project-info">
+                    <h1>Controle de Caminhões</h1>
+                    <p class="project-description">
+                        Desenvolvi um aplicativo no Power Apps para controle de entrada e saída de caminhões, com registro automático de data e hora e visualização em tempo real dos veículos no pátio. Implementei busca por placa, atualização dinâmica via Excel e integração com Power BI para análise operacional.<br>
+                        Com esse projeto, fortalecei minhas habilidades em Power Apps, manipulação de dados, uso de funções como Patch e Filter, além de integração entre ferramentas e desenvolvimento de soluções focadas em eficiência e usabilidade.
+                    </p>
+                </div>
+
+                <div class="project-visual">
+                    <div class="notebook-mockup single-image">
+                        <img src="assets/images/project.png" alt="Projeto Controle de Caminhões" class="notebook-frame">
+                    </div>
+                </div>
+            </article>
+
+            <article class="project-panel featured-project helpdesk-project">
+                <div class="project-info">
+                
+                    <h1>HelpDesk Management Platform</h1>
+
+                    <p class="project-description">
+                        Aplicação web para gerenciamento de chamados com controle completo de tickets, permissões de usuários e dashboard analítico.
+                        Desenvolvida para simular um ambiente real de suporte técnico, com foco em organização, rastreabilidade e análise de atendimentos.
+                    </p>
+
+                    <div class="project-details">
+                        <h3> Stacks utilizadas</h3>
+                        <ul>
+                            <li>C# JavaScript HTML5 / CSS3</li>
+                        </ul>
+                        <h3>Funcionalidades</h3>
+                        <ul>
+                            <li>CRUD completo de chamados</li>
+                            <li>Cadastro e gestão de empresas e usuários</li>
+                            <li>Controle de status (Aberto, Em andamento, Fechado)</li>
+                            <li>Sistema de autenticação e níveis de acesso (Admin / Atendente)</li>
+                            <li>Dashboard com métricas operacionais</li>
+                            <li>Listagem e detalhamento de chamados</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="project-visual helpdesk-gallery">
+                    <div class="helpdesk-grid">
+                        <img src="assets/images/helpdesk/tlhome-visao-cliente.png" alt="Tela inicial do cliente">
+                        <img src="assets/images/helpdesk/tlchamados.png" alt="Tela de chamados">
+                        <img src="assets/images/helpdesk/tladmin.png" alt="Tela de administração">
+                        <img src="assets/images/helpdesk/tlinicial.png" alt="Tela inicial do sistema">
+                        <img src="assets/images/helpdesk/login.png" alt="Tela de login">
+                        <img src="assets/images/helpdesk/tlchamados-cliente.png" alt="Tela de chamados do cliente">
+                    </div>
+                </div>
+            </article>
+
+            <article class="project-panel more-projects-panel">
+
+                <div class="more-projects-content">
+
+                    <p class="project-tag">OUTROS PROJETOS</p>
+
+                    <h1>Explore mais no meu GitHub</h1>
+
+                    <p class="more-projects-text">
+                        Além dos projetos apresentados aqui, também desenvolvi outras soluções envolvendo automações, dashboards, aplicações web e integrações de sistemas.
+                        <br><br>
+                        Para visualizar mais trabalhos e acompanhar minha evolução como desenvolvedor, acesse meu GitHub.
+                    </p>
+
+                    <a href="https://github.com/guedesjean" target="_blank" class="github-cta">
+                        Ver projetos no GitHub →
+                    </a>
+
+                </div>
+
+            </article>
+        </div>
+
+        <div class="projects-counter">
+            <div class="projects-counter-current" id="projectsCurrent">01</div>
+            <div class="projects-counter-bar">
+                <span id="projectsCounterProgress"></span>
+            </div>
+            <div class="projects-counter-total">03</div>
+        </div>
+
+        <div class="projects-side-nav">
+            <button class="side-nav-dot active" data-index="0">01</button>
+            <button class="side-nav-dot" data-index="1">02</button>
+            <button class="side-nav-dot" data-index="2">03</button>
+        </div>
+    </section>
+
+    <!-- CONTATO -->
+    <section id="contact" class="contact-section page-section">
+        <div class="contact-content">
+            <p class="contact-tag">CONTATOS</p>
+            <h2>Vamos construir algo juntos</h2>
+            <p class="contact-text">
+                Estou disponível para projetos de desenvolvimento web e full stack, utilizando Java, JavaScript, PHP e SQL, e também, automações com Excel e Power BI.
+           </p>
+            <div class="contact-buttons">
+
+                <a href="mailto:jeansantosguedes@gmail.com" class="MailBtn">
+                    <span class="svgContainer">
+                        <svg
+                        fill="white"
+                            height="32"
+                            width="32"
+                            viewBox="0 0 32 32"
+                            xmlns="http://www.w3.org/2000/svg"
+                            ><path
+                                d="M28 5H4c-1.104 0-2 .896-2 2v18c0 1.104.896 2 2 2h24c1.104 0 2-.896 2-2V7c0-1.104-.896-2-2-2zm0 4.879L16 18 4 9.879V7l12 8 12-8v2.879zM4 23V11.885l11.446 7.63c.269.18.594.274.921.274s.652-.094.92-.274L28 11.885V23H4z">
+                            </path>
+                        </svg>
+                    </span>
+                    <span class="MailBG"></span>
+                </a>
+
+                <a href="https://www.linkedin.com/in/jean-guedes-a454881b5/" target="_blank" class="LinkedinBtn">
+                    <span class="svgContainer">
+                        <svg
+                        fill="white"
+                        viewBox="0 0 24 24"
+                        height="24"
+                        width="24"
+                        xmlns="http://www.w3.org/2000/svg"
+                        >
+                        <path
+                            d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"
+                        ></path>
+                        </svg>
+                    </span>
+                    <span class="BG"></span>
+                </a>
+
+                <a href="https://github.com/guedesjean" target="_blank" class="Btn">
+                    <span class="svgContainer">
+                        <svg fill="white" viewBox="0 0 496 512" height="1.6em"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg>
+                    </span>
+                    <span class="BG"></span>
+                </a>
+
+
+                <a href="https://wa.me/5517981077743" target="_blank" class="WhatsBtn">
+                    <span class="svgContainer">
+                        <svg viewBox="0 0 16 16" height="2.5em" class="svgIcon" fill="white">
+                        <path
+                            d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"
+                        ></path>
+                        </svg>
+                    </span>
+                    <span class="WhatsBG"></span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SCRIPTS -->
+    <script src="js/gsapAnimations.js" defer></script>
+    <script src="js/typing.js" defer></script>
+    <script src="js/smoothScroll.js" defer></script>
+    <script src="js/theme.js" defer></script>
+</body>
+</html>
